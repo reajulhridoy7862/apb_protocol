@@ -74,6 +74,8 @@ class apb_monitor;
 
             t.print("MONITOR");
 
+            $display("[CAPTURE] PREADY = %0b PADDR=%0h PRDATA=%0h PWRITE= %0b PWDATA=%0h PSLVERR=%0b", vif.PREADY , vif.PADDR, vif.PRDATA, vif.PWRITE, vif.PWDATA, vif.PSLVERR); 
+
 
             // Send independent copies
 

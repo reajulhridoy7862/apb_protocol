@@ -17,6 +17,7 @@ class apb_driver;
         this.gen2drv   = gen2drv;
         this.reset_done = reset_done;
 
+
     endfunction
 
     // Initialize APB signals
@@ -213,9 +214,10 @@ class apb_driver;
 
         case (t.kind)
 
-            APB_RESET:
+            APB_RESET: begin
                 reset_phase();
-
+                $display("[ AFTER RESET] PREADY = %0b PADDR=%0h PRDATA=%0h PWRITE= %0b PWDATA=%0h PSLVERR=%0b", vif.PREADY , vif.PADDR, vif.PRDATA, vif.PWRITE, vif.PWDATA, vif.PSLVERR);
+            end
             APB_WRITE:
                 write_transfer(t);
 
@@ -226,6 +228,7 @@ class apb_driver;
                 $error("[DRIVER] Unknown transaction kind");
 
         endcase
+        $display("[DRIVEN] PREADY = %0b PADDR=%0h PRDATA=%0h PWRITE= %0b PWDATA=%0h PSLVERR=%0b", vif.PREADY , vif.PADDR, vif.PRDATA, vif.PWRITE, vif.PWDATA, vif.PSLVERR);
 
     endtask
 

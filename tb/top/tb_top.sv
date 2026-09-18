@@ -117,11 +117,17 @@ module tb_top;
             $finish;
         end
 
-    endcase
+      endcase
 
-    test.run();
+      test.run();
 
-    $finish;
+      $finish;
+
+    end
+
+    initial begin
+      $dumpfile("waveform.vcd");
+      $dumpvars(1, tb_top);
 
   end
 

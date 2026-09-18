@@ -130,7 +130,7 @@ class apb_generator;
         t.PWRITE = 1'b1;
         t.PADDR  = 32'h0000_0100;
         t.PWDATA = 32'hDEAD_BEEF;
-
+        $display("[GENERATED] PREADY = %0b PADDR=%0h PRDATA=%0h PWRITE= %0b PWDATA=%0h PSLVERR=%0b", t.PREADY , t.PADDR, t.PRDATA, t.PWRITE, t.PWDATA, t.PSLVERR);
         send(t);
 
 
@@ -141,7 +141,7 @@ class apb_generator;
         t.kind   = APB_READ;
         t.PWRITE = 1'b0;
         t.PADDR  = 32'h0000_0100;
-
+        $display("[GENERATED] PREADY = %0b PADDR=%0h PRDATA=%0h PWRITE= %0b PWDATA=%0h PSLVERR=%0b", t.PREADY , t.PADDR, t.PRDATA, t.PWRITE, t.PWDATA, t.PSLVERR);
         send(t);
 
     endtask
