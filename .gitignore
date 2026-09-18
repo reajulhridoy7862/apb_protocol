@@ -1,0 +1,32 @@
+# Vivado generated files
+*.jou
+*.log
+*.pb
+*.vcd
+
+# Vivado simulation files
+xsim.dir/
+*.wdb
+*.wcfg
+
+# Vivado generated project files
+*.xpr
+*.xpr.user
+*.ltx
+*.str
+
+# Generated simulation/output directories
+.sim/
+.cache/
+.hw/
+.ip_user_files/
+.gen/
+.xil/
+
+# Vivado reports
+*.rpt
+
+# Temporary files
+*.tmp
+*.bak
+*~
