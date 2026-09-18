@@ -78,27 +78,27 @@ module tb_top;
       case (test_name)
 
         "RESET": begin
-            reset_t = new(vif, num_random);
+            reset_t = new(vif);
             test = reset_t;
         end
 
         "WRITE": begin
-            write_t = new(vif, num_random);
+            write_t = new(vif);
             test = write_t;
         end
 
         "READ": begin
-            read_t = new(vif, num_random);
+            read_t = new(vif);
             test = read_t;
         end
 
         "INVALID": begin
-            invalid_t = new(vif, num_random);
+            invalid_t = new(vif);
             test = invalid_t;
         end
 
         "DISCOVERY": begin
-            discovery_t = new(vif, num_random);
+            discovery_t = new(vif);
             test = discovery_t;
         end
 

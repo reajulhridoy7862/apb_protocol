@@ -2,13 +2,13 @@ class read_test extends base_test;
 
 
     function new(
-        virtual apb_if vif,
-        int unsigned num_random = 100
+        virtual apb_if vif
+        //int unsigned num_random = 100
     );
 
         super.new(
-            vif,
-            num_random
+            vif
+            //num_random
         );
 
     endfunction
